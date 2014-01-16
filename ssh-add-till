@@ -1,0 +1,6 @@
+#!/bin/bash
+TIMETOSLEEP=`date --date="$1" +%s`
+TIMESTART=`date +%s`
+TIMEMARK=$(($TIMETOSLEEP-$TIMESTART))
+
+ssh-add -t $TIMEMARK
